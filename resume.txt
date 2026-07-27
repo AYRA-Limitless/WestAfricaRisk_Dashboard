@@ -1,0 +1,23 @@
+https://api.worldbank.org/v2/country/{codes_pays}/indicator/{code_indicateur}?format=json&date=2015:2024&per_page=1000
+{codes_pays} : codes ISO3 séparés par des points-virgules, ex : BEN;BFA;CIV
+{code_indicateur} : code World Bank, ex : NY.GDP.MKTP.KD.ZG (croissance du PIB)
+Pas besoin de clé API, c'est public et gratuit
+
+Les codes dont tu as besoin :
+
+Indicateur	Code
+Croissance du PIB (%)	NY.GDP.MKTP.KD.ZG
+Inflation (%)	FP.CPI.TOTL.ZG
+Dette externe (% RNB)	DT.DOD.DECT.GN.ZS
+Réserves de change (US$)	FI.RES.TOTL.CD
+PIB par habitant (US$)	NY.GDP.PCAP.CD
+Population	SP.POP.TOTL
+
+Les 15 pays CEDEAO (codes ISO3) :
+BEN, BFA, CPV, CIV, GMB, GHA, GIN, GNB, LBR, MLI, NER, NGA, SEN, SLE, TGO
+
+# erreur au niveau des respones, j'ai donc:
+print(response.status_code)
+print(response.text[:500])
+
+pour afficher le code de l'erreur puis recuperrer l'erreur en format texte

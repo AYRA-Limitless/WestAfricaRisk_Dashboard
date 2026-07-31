@@ -18,7 +18,7 @@ def CleanIndicatorData(result, indicator_name):
     df_clean=df_clean.rename(columns={"value": indicator_name})
     return df_clean
 
-#Dictionnaire contenant les contenant les codes des indicateurs et leurs noms correspondants
+#Dictionnaire les contenant les codes des indicateurs et leurs noms correspondants
 indicators = {
     "NY.GDP.MKTP.KD.ZG": "gdp_growth",
     "FP.CPI.TOTL.ZG": "inflation",

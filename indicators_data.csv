@@ -1,4 +1,4 @@
-country name,countryiso3code,date,gdp_growth,inflation,external_debt,reserves,gdp_per_capita
+country_name,countryiso3code,date,gdp_growth,inflation,external_debt,reserves,gdp_per_capita
 Benin,BEN,2024,7.45311566226201,1.16093089640415,66.5543408193995,,1485.38018885134
 Benin,BEN,2023,6.3527773854442,2.73870078406075,64.4103774213458,,1394.17784721831
 Benin,BEN,2022,6.25294705373625,1.35077863583527,63.163660783078,,1266.42711031904

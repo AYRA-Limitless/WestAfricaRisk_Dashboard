@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 from sklearn.cluster import KMeans
 
-st.title("WBG Pioneers - Country Risk Dashboard")
+st.title("ECOWAS Country Risk Dashboard")
 st.markdown("""
 # Christ Armand AYRA
 ## Data Analyst in training
@@ -67,7 +67,7 @@ with tab1:
     st.dataframe(detail_df, hide_index=True)
 
     # Risk score bar chart using Plotly Express
-    riskgraphic = px.bar(df.sort_values("risk score", ascending=True), x="country name", y="risk score", color="risk category", color_discrete_map={"Low Risk": "#1cfa50", "Medium Risk": "#fcb32d", "High Risk": "#fa3748"}, title="Country Risk Scores - ECOWAS 2024")
+    riskgraphic = px.bar(df.sort_values("risk score", ascending=True), x="country name", y="risk score", color="risk category", color_discrete_map={"Low Risk": "#1cfa50", "Medium Risk": "#fcb32d", "High Risk": "#fa3748"}, title="ECOWAS Risk Score barchart")
     st.plotly_chart(riskgraphic)
 
     # Apply KMeans clustering to the z-scores of the economic indicators and display the cluster assignments

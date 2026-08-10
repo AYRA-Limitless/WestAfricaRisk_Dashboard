@@ -13,7 +13,7 @@ filtered_df["gdp_per_capitaz"] = (filtered_df["gdp_per_capita"] - filtered_df["g
 
 #Un score de risque obtenu en sommant les différents indicateurs après standardisation
 filtered_df["risk_score"]=(-filtered_df["gdp_growthz"] + filtered_df["inflationz"] + filtered_df["external_debtz"]- filtered_df["gdp_per_capitaz"]) 
-
+#Un score de risque catégorisé en trois niveaux : faible, moyen et élevé en utilisant la fonction qcut de pandas pour diviser les scores en trois quantiles
 filtered_df["risk_category"]= pd.qcut(filtered_df["risk_score"],q=3, labels=["Low Risk", "Medium Risk", "High Risk"])
 #Affiche les différents indicateurs standardisés
 print(filtered_df[["country_name", "gdp_growthz", "inflationz", "external_debtz", "reservesz", "gdp_per_capitaz"]])

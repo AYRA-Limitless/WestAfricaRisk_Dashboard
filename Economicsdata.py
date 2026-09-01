@@ -39,6 +39,8 @@ for code,name in indicators.items():
         indicatorsdf=pd.merge(indicatorsdf, df_clean, on=["country name", "countryiso3code", "date"])
         
 
-print(indicatorsdf.head())
-print(indicatorsdf.shape)      
-indicatorsdf.to_csv("indicators_data.csv", index=False)
+#print(indicatorsdf.head())
+#print(indicatorsdf.shape)      
+#indicatorsdf.to_csv("indicators_data.csv", index=False)
+history_df = pd.read_csv("indicators_data.csv")
+print(history_df.columns)

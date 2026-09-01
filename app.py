@@ -61,10 +61,11 @@ t = T[lang]
 st.title(t["title"])
 col_bio, col_photo = st.columns([3, 1])
 with col_bio:
+    bio_one_line = " ".join(t["bio"].split())
     st.markdown(f"""
-    # Christ Armand AYRA
-    ## {t['role']}
-     {t['bio']}
+    ### Christ Armand AYRA
+    #### {t['role']}
+    {bio_one_line}
     """)
 with col_photo:
     st.image("IMG_9855.jpg.jpeg", width=200)
